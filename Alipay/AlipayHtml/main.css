@@ -1,0 +1,55 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow: hidden;
+    position: relative;
+}
+
+.back{
+
+}
+
+.items,.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.item{
+    background: #fff none no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:none;
+}
+
+
+/* -------------------- 分界线 -------------------- */
+
+/* html{
+    background-color: blue;
+}
+
+html{
+    background-color: yellow;
+}
+
+#root{
+    background-color: red;
+}
+
+#root{
+    background-color: green;
+    background: blue;
+}
+
+.root{
+    background-color: black;
+} */
+
+/* Id > class > default */
+/* back > prev */

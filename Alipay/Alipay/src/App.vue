@@ -3,7 +3,7 @@
     <div class="div-items">
       <div class="div-bgm-item1"></div>
       <div class="div-bgm-item2"></div>
-      <div class="div-bgm-item3" v-bind:class=""></div>
+      <div class="div-bgm-item3"></div>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
       backgroundIndex: 1,
     }
   },
-  computed() {
+  computed: {
     backgroundItem1Style() {
       return "";
     }
