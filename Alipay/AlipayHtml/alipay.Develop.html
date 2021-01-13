@@ -6,14 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>支付宝 知托付！</title>
     <link rel="icon" href="./public/favicon.ico">
-    <link rel="stylesheet" href="main.css" id='my-stylesheet'>
+    <link rel="stylesheet" href="./src/css/main.css" id='my-stylesheet'>
     <script src="main.js" type="text/javascript"></script>
     <script src="helper.js" type="text/javascript"></script>
 </head>
 
 <body>
     <div class="main">
+        <div class="header">
+            <div class="nav">
+                <div class="logo"></div>
+                <img class="ipv6" src="./src/imgs/ipv6.png">
+                <div class="entry">
+                    <span class="state">我已有支付宝账户</span>
+                    <a href="https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F"
+                        target="_self" seed>快速登录</a>
+                </div>
+            </div>
+        </div>
         <div class="container">
+            <div class="wrap">
+                <div class="slogan"></div>
+                <div class="mid">
+                    <div class="main-entry">
+                        <a href="javascript:;" class="develop-login">
+                            <span class="title">
+                                <i class="isv-developer">
+                                    "我是服务商"
+                                </i>
+                            </span>
+                        </a>
+                        <a href="javascript:;" class="personal-developer-login">
+                            <span class="title">
+                                <i class="developer">
+                                    "我是开发者"
+                                </i>
+                            </span>
+                        </a>
+                        <a href="javascript:;" class="seller-login">
+                            <span class="title">
+                                <i class="seller">
+                                    "我商商家用户"
+                                </i>
+                            </span>
+                            <span class="seller-entry alipay">我是支付宝商家</span>
+                            <span class="inerval-line"></span>
+                            <span class="seller-entry koubei">我是口碑商家</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="back">
                 <div class="items">
                     <div class="item item1" style="background-image: url(./src/imgs/back1.jpg);"></div>
@@ -26,7 +68,7 @@
 
     <script>
         var slideEle = slider($('.items'));
-        
+
         /* 背景切换 */
         if (slideEle.itemsNum && slideEle.itemsNum > 1) {
             setInterval(function () {
