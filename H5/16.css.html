@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span>Hello World!</span>
+            <div>
+                <span>Hello World!</span>
+            </div>
+        </div>
+        <span>Hello World!</span>
+        <span>Hello World!</span>
+    </div>
+
+    <div class="div-shadow">
+        
+    </div>
+
+    <div class="div-outline">
+        <button>Ok</button>
+    </div>
+
+    <div class="div-box-inlinkblock"></div>
+    <div class="div-box-inlinkblock"></div>
+
+    <div class="div-box-block"></div>
+    <div class="div-box-block"></div>
+    <div class="div-box-listitem"></div>
+    <div class="div-box-listitem"></div>
+
+    <span>Hello WOrld</span>
+    <span class="span-inlineblock">Hello World!</span>
+    <br>
+    <span class="span-float">Hhehe</span>
+    <span class="span-float">Floatting</span>
+</body>
+
+<style>
+    html, body{
+        width: 100%;
+    }
+
+    span {
+        /* default */
+        background-color: yellow;
+        display: inline;
+        width: 200px;
+        height: 50px;
+    }
+
+    .span-float {
+        float: left;
+        clear: left;
+    }
+
+    .span-inlineblock {
+        display: inline-block;
+        width: 120px;
+
+    }
+
+    .div-box-inlinkblock {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        background-color: purple;
+        margin-top: 5px;
+    }
+    .div-box-block {
+        display: block;
+        width: 50px;
+        height: 20px;
+        background-color: purple;
+        margin-top: 5px;
+    }
+
+    .div-box-listitem {
+        display: list-item;
+        width: 50px;
+        height: 20px;
+        background-color: purple;
+        margin-top: 5px;
+    }
+
+    .div-box-listitem::before {
+        content: "*";
+        color: white;
+    }
+
+    .div-outline {
+        margin-top: 10px;
+    }
+
+    .div-outline button {
+        outline: solid  red  thick;
+    }
+
+    .div-shadow {
+        Height: 100px;
+        Width: 100px;
+        bACkground-color: purple;
+        margin-top: 10px;
+        box-shadow: 5px 4px 10px 2px gray;
+    }
+
+    .container {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        background-color: red;
+        height: 85px;
+        width: 200px;
+        border-radius: 10px;
+        border-style: dashed;
+        overflow: scroll;
+    }
+    .box {
+        border-style: inset;
+        border-width: thick;
+        border-radius: inherit;
+        border-bottom: inherit;
+        background-color: blue;
+        padding: 5px;
+        height: 50%;
+        width: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .box span {
+        color: green;
+    }
+    .box > span {
+        display: block;
+        color: yellow;
+    }
+    .box ~ span {
+        display: block;
+        color: greenyellow;
+    }
+    .box + span {
+        color: purple;
+    }
+
+    span::first-letter {
+        color: white;
+    }
+</style>
+</html>

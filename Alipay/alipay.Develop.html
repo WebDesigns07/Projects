@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" id="root" class="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付宝 知托付！</title>
+    <link rel="icon" href="./public/favicon.ico">
+    <link rel="stylesheet" href="./src/css/main.css" id='my-stylesheet'>
+    <script src="main.js" type="text/javascript"></script>
+    <script src="helper.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="nav">
+                <div class="logo"></div>
+                <img class="ipv6" src="./src/imgs/ipv6.png">
+                <div class="entry">
+                    <span class="state">我已有支付宝账户</span>
+                    <a href="https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F"
+                        target="_self" seed>快速登录</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrap">
+                <div class="slogan"></div>
+                <div class="mid">
+                    <div class="main-entry">
+                        <a href="javascript:;" class="developer-login">
+                            <span class="title"><i class="isv-developer"></i>我是服务商</span>
+                            <s></s>
+                        </a>
+                        <a href="javascript:;" class="personal-developer-login">
+                            <span class="title"><i class="developer"></i>我是开发者</span>
+                            <s></s>
+                        </a>
+                        <a href="javascript:;" class="seller-login" target="_blank">
+                            <span class="title"><i class="seller"></i>我是商家用户</span>
+                            <span class="seller-entry alipay">我是支付宝商家</span>
+                            <span class="inerval-line"></span>
+                            <span class="seller-entry koubei">我是口碑商家</span>
+                            <s></s>
+                        </a>
+                        <a href="javascript:;" class="personal-login">
+                            <span class="title"><i class="personal"></i>我是个人用户</span>
+                            <s></s>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="items">
+                    <div class="item item1" style="background-image: url(./src/imgs/back1.jpg);"></div>
+                    <div class="item item2" style="background-image: url(./src/imgs/back2.jpg);"></div>
+                    <div class="item item3" style="background-image: url(./src/imgs/back3.jpg);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="https://www.antfin.com/" target="_blank" seed>蚂蚁集团</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://p.alipay.com/portal/home.htm" target="_blank" seed>服务商平台</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://www.alipay.com/" target="_blank" seed>支付宝</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://yebprod.alipay.com/yeb/index.htm" target="_blank" seed>余额宝</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://b.alipay.com/?ynsrc=zhuzhanA" target="_blank" seed>蚂蚁商家中心</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://www.xin.xin" target="_blank" seed>芝麻信用</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://loan.mybank.cn/" target="_blank" seed>蚂蚁微贷</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://www.mybank.cn/index.htm" target="_blank" seed>网商银行</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://open.alipay.com/platform/home.htm?from=zhuzhanfooter20160818" target="_blank"
+                            seed>开放平台</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://talent.alibaba.com/" target="_blank" seed>诚征英才</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://ab.alipay.com/i/lianxi.htm" target="_blank" seed>联系我们</a>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://global.alipay.com/index.htm" target="_blank" seed>International Business</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ownership">
+                <span><a href="./src/imgs/grant.jpg" target="_blank">经营许可证编号：合字B2-20190046</a><a
+                        style="margin-left:10px;" href="http://www.beian.miit.gov.cn"
+                        target="_blank">网站备案：沪ICP备15027489号</a></span>
+            </div>
+            <div class="nav-icons">
+                <a href="./src/imgs/nav-icons/pic1.png" class="pic1" target="_blank"></a>
+                <a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.ALIPAY.COM&zh_cn"
+                    class="pic2" target="_blank"></a>
+                <a href="javascript:;" class="pic3" target="_blank"></a>
+                <a href="./src/imgs/nav-icons/pic4.png" class="pic4" target="_blank"></a>
+                <a href="./src/imgs/nav-icons/pic7.jpg" class="pic7" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideEle = slider($('.items'));
+
+        /* 背景切换 */
+        if (slideEle.itemsNum && slideEle.itemsNum > 1) {
+            setInterval(function () {
+                slideEle.next();
+            }, 4000)
+        }
+    </script>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        //cookie记录个人登录标记为1,商家登录标记为2
+        $(".personal-login").click(function () {
+            setCookie("_n_h_n_option", "1", 365);
+            location.href = "https://www.alipay.com/";
+        });
+
+        $(".seller-login").click(function (e) {
+            var target = $(e.target);
+            if (target.hasClass('alipay')) {
+                location.href = "https://b.alipay.com/?ynsrc=zhuzhanA";
+            } else if (target.hasClass('koubei')) {
+                location.href = "https://open.alipay.com/platform/home.htm?from=wwwalipay";
+            }
+        });
+
+        // 按钮——我是服务商
+        $(".developer-login").click(function () {
+            location.href = "https://p.alipay.com/portal/home.htm";
+        });
+
+        // 按钮——我是开发者
+        $(".personal-developer-login").click(function () {
+            location.href = "https://open.alipay.com/platform/home.htm?from=wwwalipay";
+        });
+    </script>
+</body>
+
+</html>
