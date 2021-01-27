@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Title</caption>
+        <thead>
+            <th>Header1</th>
+            <th>Header2</th>
+            <th>Header3</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell1</td>
+                <td>Cell2</td>
+                <td>Cell3</td>
+            </tr>
+            <tr>
+                <td>Cell4</td>
+                <td></td>
+                <td>Cell6</td>
+            </tr>
+            <tr>
+                <td>Cell7</td>
+                <td>Cell8</td>
+                <td>Cell9 with long content in this cell element different from other cells</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol>
+        Here is items:
+        <li style="list-style-type: upper-roman;">List item 1</li>
+        <li style="list-style-type:lower-alpha">List item 2</li>
+        <li style="list-style-type:disc">List item 3</li>
+        <li style="list-style-type: decimal;">List item 4</li>
+        <!-- <li style="list-style-image:url(./images/banana.jpg)">List item 4</li> -->
+    </ol>
+    <ol>
+        Here is items:
+        <li class="li-outside" style="list-style-type: upper-roman;">List item 1</li>
+        <li class="li-outside" style="list-style-type:lower-alpha">List item 2</li>
+        <li class="li-outside" style="list-style-type:disc">List item 3</li>
+        <li class="li-outside" style="list-style-type: decimal;">List item 4</li>
+        <!-- <li style="list-style-image:url(./images/banana.jpg)">List item 4</li> -->
+    </ol>
+</body>
+<style>
+    table {
+        caption-side: bottom;
+        empty-cells: hide;
+        border-spacing: 5px;
+        table-layout: fixed;
+        width: 100%;
+        /* 取消单元格边框 */
+        /* border-collapse: collapse; */
+    }
+
+    ol {
+        /* 设置项目符号 */
+        /* See: https://www.w3.org/TR/css3-lists */
+        list-style-type: upper-roman;
+        list-style-position: inside;
+    }
+
+    .li-outside {
+        list-style-position: outside;
+    }
+</style>
+</html>

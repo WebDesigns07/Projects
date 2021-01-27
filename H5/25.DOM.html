@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>DOM</title>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == "interactive") {
+                document.getElementById("div-skip").onclick = function () {
+                    document.location.assign("https://www.baidu.com");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>Hello World!</div>
+    <button id="div-skip" class="btn btn-primary btn-selector" onclick="skip()">Skip</button>
+    <button id="divskip" class="btn btn-primary" onclick="skip()">Skip</button>
+    <button id="div-addcookie" class="btn btn-primary btn-selector">Add Cookie</button>
+    <button id="div-updatecookie" class="btn btn-primary">Update Cookie</button>
+</body>
+
+<script>
+    console.dir(document.scripts.length);
+    var buttons = document.getElementsByTagName('button');
+    console.dir(buttons.divskip);
+    var selectors = document.querySelectorAll('button.btn-selector');
+    console.dir(selectors);
+
+    console.dir(document.firstChild);
+    // console.dir(this);
+    // console.dir(window);
+    // console.dir(location);
+    // console.dir(document.location);
+
+    document.writeln("<pre>URL: " + document.URL);
+    document.writeln("characterSet: " + document.characterSet);
+    document.writeln("charset: " + document.charset);
+    document.writeln("compactMode: " + document.compatMode);
+    document.writeln("title: " + document.title);
+    document.write("</pre>");
+</script>
+
+<script>
+    var cookieCount = 0;
+    document.getElementById("div-addcookie").onclick = function () {
+        cookieCount++;
+        document.cookie = "Cookie_1=Value_" + cookieCount;
+    }
+    document.getElementById("div-updatecookie").onclick = function () {
+        cookieCount++;
+        document.cookie = "Cookie_1=Updated_" + cookieCount;
+        console.dir(cookieCount);
+        console.dir(document.cookie);
+    }
+
+    function skip() {
+        // document.location.assign("https://www.baidu.com");
+    }
+</script>
+
+</html>

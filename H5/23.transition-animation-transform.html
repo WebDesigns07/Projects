@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn btn-primary btn-transition" onclick="Ok();">Transition</button>
+    <br>
+    <button id="animation" class="btn btn-primary btn-animation">Animation</button>
+    <button class="btn btn-primary btn-animation1">Animation1</button>
+    <button class="btn btn-primary btn-stop" onclick="playAnimation()">Play Animation</button>
+    <button class="btn btn-primary btn-stop" onclick="stopAnimation()">Stop Animation</button>
+    <br>
+    <button class="btn btn-primary btn-transform">Transform</button>
+</body>
+<script>
+    function Ok() {
+        alert("Ok");
+    }
+
+    function stopAnimation() {
+        var button = document.getElementById('animation');
+        console.dir(button);
+        button.style.webkitAnimationPlayState = 'paused';
+    }
+    function playAnimation() {
+        var button = document.getElementById('animation');
+        console.dir(button);
+        button.style.animationPlayState = 'running';
+    }
+</script>
+<style>
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    .btn:disabled, .btn.disabled {
+        opacity: 0.65;
+    }
+    .btn:not(:disabled):not(.disabled) {
+        cursor:pointer;
+    }
+    .btn-primary {
+        color: #fff;
+        opacity: 0.5;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+    /* 过渡 */
+    .btn-transition:hover {
+        opacity: 1;
+        transition-delay: 0.2s;
+        transition-duration: 0.75s;
+        transition-timing-function: linear;
+        transition-property: opacity;
+        /* -webkit-transition-delay: 0.2s;
+        -webkit-transition-duration: 0.75s;
+        -webkit-transition-property: opacity; */
+    }
+    .btn-transition {
+        /* 反向过渡 */
+        transition-delay: 0.2s;
+        transition-duration: 0.75s;
+        transition-property: opacity;
+    }
+    /* 动画 */
+    .btn-animation, .btn-animation1 {
+    /* .btn-animation:hover { */
+        animation-delay: 0.2s;
+        animation-duration: 3.75s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: 'GrowDarker';
+
+        /* 停止动画 */
+        /* animation-play-state: paused; */
+        animation-play-state:running;
+    }
+    .btn-animation {
+        
+    }
+    .btn-stop, .btn-play {
+        opacity: 1;
+    }
+
+    .btn-transform {
+        opacity: 1;
+        position: relative;
+        left: 50px;
+        top: 50px;
+    }
+    .btn-transform:hover {
+        transform: rotate(-45deg) scaleX(1.4) scaleY(1.5) skewX(45deg);
+        transform-origin: right top;
+        transition-duration: 1.5s;
+        transition-property: transform;
+    }
+
+    @keyframes GrowDarker {
+        from {
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+        }
+        /* 50% {
+            opacity: 1;
+        }
+        to {
+            opacity: 0.5;
+        } */
+    }
+
+</style>
+
+</html>
